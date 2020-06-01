@@ -58,7 +58,7 @@
             if (scroll <= 50) {
                 $("header").removeClass("scrollHeader").addClass("fixedHeader");
                 logoinner.attr('src', 'img/logos/logo-inner.png');
-                logodefault.attr('src', 'img/logos/logo.png');
+                logodefault.attr('src', 'img/logos/Clear-Science-Inc-Logo-icon_only.png');
                 logowhite.attr('src', 'img/logos/logo-white.png');
                 logowhitedark.attr('src', 'img/logos/logo-white.png');
                 logo2.attr('src', 'img/logos/logo-2-light.png');
@@ -66,8 +66,8 @@
             } 
             else {
                 $("header").removeClass("fixedHeader").addClass("scrollHeader");
-                logoinner.attr('src', 'img/logos/logo.png');
-                logodefault.attr('src', 'img/logos/logo.png');
+                logoinner.attr('src', 'img/logos/Clear-Science-Inc-Logo-icon_only.png');
+                logodefault.attr('src', 'img/logos/Clear-Science-Inc-Logo-icon_only.png');
                 logowhite.attr('src', 'img/logos/logo-white.png');
                 logowhitedark.attr('src', 'img/logos/logo-dark.png');
                 logo2.attr('src', 'img/logos/logo-2-dark.png');
