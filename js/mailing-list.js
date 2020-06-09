@@ -6,11 +6,8 @@ function updateMailList() {
       description: "visitor",
       subscribed: true,
     }
+    
     var url = `https://localhost:5001/account/AddListMember?email=${data.email}&subscribed=${data.subscribed}&name=${data.name}&description=${data.description}`;
-    console.log(url);
-    function parseEmail() {
-        //sanitize email here
-    }
     Http.open("GET", url);
     Http.send();
     Http.onreadystatechange=function() {
@@ -19,6 +16,9 @@ function updateMailList() {
       if(response.message == "Mailing list member has been created")
       {
         $('#Success-tag').text("Successfully Subscribed!");
+        setTimeout(function() {
+          $('#Success-tag').text("");
+        }, 5000);
         document.getElementById('Email1').value = "";
         document.getElementById('Name1').value = "";
       }
