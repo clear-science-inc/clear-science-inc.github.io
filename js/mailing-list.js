@@ -13,25 +13,22 @@ function updateMailList() {
     }
     Http.open("GET", url);
     Http.send();
-    Http.onreadystatechange=function(){
-      //console.log(Http.responseText);
-      var response = Http.responseText;
-      console.log(response);
-      if(Http.responseText == '{"message": "Mailing list member has been created"}')
+    Http.onreadystatechange=function() {
+      var response = JSON.parse(Http.responseText);    
+      var currentEmail = data.email;
+      if(response.message == "Mailing list member has been created")
       {
-        //console.log(Http.responseText);
-        console.log(this.status);
         $('#Success-tag').text("Successfully Subscribed!");
         document.getElementById('Email1').value = "";
         document.getElementById('Name1').value = "";
       }
-      else if(Http.responseText == `{"message": "The 'address' parameter should be a valid email address"}`)
+      else if(response.message == "The 'address' parameter should be a valid email address")
       {
         $('#Success-tag').text("Invalid Email!");
         document.getElementById('Email1').value = "";
         document.getElementById('Name1').value = "";
       }
-      else if(Http.responseText == `{"message": "Address already exists ${data.email}"}`)
+      else if(response.message == "Address already exists '" + currentEmail.toLowerCase() + "'")
       {
         $('#Success-tag').text("Already Subscribed!");
         document.getElementById('Email1').value = "";
