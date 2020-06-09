@@ -1254,6 +1254,6 @@
         // stellar
         $window.stellar();
 
-    });
+    });    
 
 })(jQuery);

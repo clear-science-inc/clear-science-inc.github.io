@@ -861,8 +861,13 @@
                             <p class="margin-20px-bottom ">Sign up today.&nbsp; Be the first to know of emerging capabilities.&nbsp;</p>
                             <form>
                                 <div class="form-group footer-subscribe ">
-                                    <input type="email " placeholder="Subscribe with us " id="Email1 " class="form-control ">
-                                    <a class="butn theme grey-hover "><span>Join</span></a>
+                                    <input type="email " placeholder="Subscribe with us " id="Email1" class="form-control ">
+                                    <input type="text " placeholder="Your Name " id="Name1" class="form-control ">
+                                    <a class="butn theme grey-hover " onclick="updateMailList()"><span>Join</span></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <span id="Success-tag"></span>
                                 </div>
                             </form>
                         </div>
@@ -938,6 +943,8 @@
         <script src="js/jquery.magnific-popup.min.js "></script>
 
         <script src="js/main.js "></script>
+
+        <script src="js/mailing-list.js"></script>
 
         <!-- custom scripts -->
         <script type="text/javascript ">
