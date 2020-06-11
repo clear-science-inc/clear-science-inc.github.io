@@ -3,11 +3,10 @@ function updateMailList() {
     const data = {
       email: document.getElementById('Email1').value,
       name: document.getElementById('Name1').value,
-      description: "visitor",
-      subscribed: true,
+      description: "visitor"
     }
 
-    var url = `https://id.clearscienceinc.com/account/AddListMember?email=${data.email}&subscribed=${data.subscribed}&name=${data.name}&description=${data.description}`;
+    var url = `https://localhost:5001/account/AddListMember?email=${data.email}&name=${data.name}&description=${data.description}`;
     Http.open("GET", url);
     Http.send();
     Http.onreadystatechange=function() {
