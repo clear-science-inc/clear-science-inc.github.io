@@ -5,7 +5,7 @@ function updateMailList() {
     name: document.getElementById('Name1').value,
     description: "visitor"
   }
-  var url = `https://localhost:5001/account/AddListMember?email=${data.email}&name=${data.name}&description=${data.description}`;
+  var url = `https://id.clearscienceinc.com/account/AddListMember?email=${data.email}&name=${data.name}&description=${data.description}`;
   Http.open("GET", url);
   Http.send();
   Http.onreadystatechange=function() {
