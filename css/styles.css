@@ -41,6 +41,21 @@
 /* ===================================
     Common styles
 ====================================== */
+/* custom */
+
+.centered-paragraph {
+  text-align: center;
+}
+
+h4.header-with-subheader {
+  font-size: 20px !important;
+  margin-bottom: -2px !important;
+}
+
+.career-link {
+  color: rgba(2, 141, 198, 0.9);
+}
+
 /* loader */
 #preloader {
   position: fixed;
@@ -541,6 +556,9 @@ input:focus, textarea:focus, select:focus {
 /* ===================================
     Section heading
 ====================================== */
+#careers-heading {
+  margin-bottom: 20px;
+}
 .section-heading {
   margin-bottom: 50px;
   text-align: center; }
