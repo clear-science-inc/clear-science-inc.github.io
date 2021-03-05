@@ -33,6 +33,7 @@
 
     <!-- custom css -->
     <link href="css/styles.css" rel="stylesheet" id="colors">
+    <link href="css/slideshow.css" rel="stylesheet" id="slideshowStyles">
 
     <style type="text/css">
         .demo-grid-wrapper .demo-grid-item-img {
@@ -241,22 +242,99 @@
         </header>
         <!-- end header section -->
 
-        <!-- start intro section -->
-        <a href="https://corgi.clearscienceinc.com/" target="_blank" style="text-decoration: none;">
-            <section class="position-relative padding-five-tb bg-overlay bg-animate" style="height: 300px; background-image: url(img/slider/acaf_products_long.png);">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-8 col-sm-10 center-col text-center last-paragraph-no-margin">
-                            <h5 class="alt-font font-size50 sm-font-size36 font-weight-700 text-white text-uppercase margin-5px-bottom sm-no-padding"><strong>Climate Outlook Resource for Global Insight (CORGI)</strong></h5>
-                            <!--<div class="separator-line-horrizontal-medium-light2 bg-white center-col margin-30px-bottom"></div>-->
-                            <p class="alt-font font-weight-600 text-white font-size40 sm-font-size28 margin-15px-bottom">Timing. Is. Everything.</p>
-                            <!--<p class="no-margin-bottom text-light-gray font-size18 line-height-28">Placeholder</p>-->
-                        </div>
-                    </div>
+        <!-- start slideshow -->
+        <div class="slideshow-container">
+
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <a href="https://corgi.clearscienceinc.com/" target="_blank" style="text-decoration: none;">
+              <section class="position-relative bg-overlay bg-animate" style="height: 500px; background-image: url(img/slider/acaf_products_long.png); display: flex; align-items: center;">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-lg-9 col-md-8 col-sm-10 center-col text-center last-paragraph-no-margin">
+                              <h5 class="alt-font font-size50 sm-font-size36 font-weight-700 text-white text-uppercase margin-5px-bottom sm-no-padding"><strong>Climate Outlook Resource for Global Insight (CORGI)</strong></h5>
+                              <p class="alt-font font-weight-600 text-white font-size40 sm-font-size28 margin-15px-bottom">Timing. Is. Everything.</p>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+          </a>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="slideshow-bg-img" style="background-image: url(img/slideshow/winter-forest.jpg);">
+              <div class="slideshow-overlay"></div>
+              <div class="slideshow-blurb">
+                <div>
+                  <h4 class="slideshow-blurb-header">CSI Provides Improved Long-range Freeze Outlook for Florida Growers</h4>
+                  <p>Working with the University of Florida Institute of Food and Agricultural Sciences (IFAS), CSI has developed an 
+                    improved Freeze Probability Outlook to support Florida agriculture. This extended-range forecast provides insight 
+                    beyond the 2-week outlook available from other sources.</p>
+                  <a class="butn theme grey-hover " onclick="jumpToNewsBlurb('news-products-tab', 'news-freeze-outlook')"><span>Read More</span></a>
                 </div>
-            </section>
-        </a>
-        <!-- end intro section -->
+              </div>
+            </div>
+          </div>
+        
+          <div class="mySlides fade">
+            <div class="slideshow-bg-img" style="background-image: url(img/slideshow/earth.jpg);">
+              <div class="slideshow-overlay"></div>
+              <div class="slideshow-blurb">
+                <div>
+                  <h4 class="slideshow-blurb-header">CSI’s ClimateLab™ Supports Environmental Research at the Naval Postgraduate School</h4>
+                  <p>Graduate students at the Naval Postgraduate School (NPS) in Monterey, California are using a new tool to facilitate environmental 
+                    research projects. ClimateLab™ is a web-based subscription service that provides rapid access to environmental data sets without 
+                    requiring users to download, store, or backup data on local machines.</p>
+                  <a class="butn theme grey-hover " onclick="jumpToNewsBlurb('news-products-tab', 'news-climate-lab')"><span>Read More</span></a>
+                </div>
+              </div>
+            </div>
+          </div>          
+
+          <div class="mySlides fade">
+            <div class="slideshow-bg-img" style="background-image: url(img/slideshow/ocean.jpg);">
+              <div class="slideshow-overlay"></div>
+              <div class="slideshow-blurb">
+                <div>
+                  <h4 class="slideshow-blurb-header">CSI Enhances Navy Search and Rescue Software</h4>
+                  <p>CSI has been selected to continue providing software upgrades and user support services for the Navy’s Drift-SAR system. 
+                    Drift-SAR predicts the location of drifting floating objects – including personnel – and submerged objects based on objects’ 
+                    physical characteristics and observed and forecasted environmental conditions. </p>
+                  <a class="butn theme grey-hover " onclick="jumpToNewsBlurb('news-contracts-tab', 'news-driftsar')"><span>Read More</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="slideshow-bg-img" style="background-image: url(img/slideshow/navy.jpg);">
+              <div class="slideshow-overlay"></div>
+              <div class="slideshow-blurb">
+                <div>
+                  <h4 class="slideshow-blurb-header">CSI Wins SBIR Phase II.5 Contract for ACAF-DSS</h4>
+                  <p>The Office of Naval Research has issued a Supplemental Phase II (Phase II.5) contract to CSI to continue development of our Advanced Climate Analysis and Forecast – 
+                    Decision Support System (ACAF-DSS). Under the new contract, CSI will research, develop, and demonstrate technical objectives requested by fleet support personnel and researchers.</p>
+                  <a class="butn theme grey-hover " onclick="jumpToNewsBlurb('news-contracts-tab', 'news-phase-ii5')"><span>Read More</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Next and previous buttons -->
+          <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="slideshow-dot" onclick="currentSlide(1)"></span>
+          <span class="slideshow-dot" onclick="currentSlide(2)"></span>
+          <span class="slideshow-dot" onclick="currentSlide(3)"></span>
+          <span class="slideshow-dot" onclick="currentSlide(4)"></span>
+          <span class="slideshow-dot" onclick="currentSlide(5)"></span>
+        </div>
+        <!-- end slideshow -->
 
 
         <!-- Start R&D areas section -->
@@ -454,23 +532,65 @@
                     <div class="col-12 ">
                         <div class="horizontaltab ">
                             <ul class="resp-tabs-list hor_1 ">
-                                <li><i class="fas fa-laptop "></i> Products</li>
-                                <li><i class="fas fa-paperclip "></i> Contracts</li>
-                                <li><i class="fas fa-user "></i> Community</li>
+                                <li id="news-products-tab"><i class="fas fa-laptop "></i> Products</li>
+                                <li id="news-contracts-tab"><i class="fas fa-paperclip "></i> Contracts</li>
+                                <li id="news-events-tab"><i class="fas fa-calendar"></i> Events</li>
+                                <li id="news-community-tab"><i class="fas fa-user "></i> Community</li>
                             </ul>
                             <div class="resp-tabs-container hor_1 ">
-                                <div>
+                                <div class="news-products">
 
                                     <!--vertical Tabs-->
 
                                     <div class="childverticaltab ">
                                         <!-- Products tabs -->
                                         <ul class="resp-tabs-list ver_1 ">
+                                            <li id="news-freeze-outlook">CSI Provides Improved Long-range Freeze Outlook for Florida Growers</li>
+                                            <li id="news-climate-lab">CSI’s ClimateLab™ Supports Environmental Research at the Naval Postgraduate School</li>
                                             <li>Historical Temperatures Widget - New Launch!</li>
                                             <li>Climate Index Python Lib</li>
 
                                         </ul>
                                         <div class="resp-tabs-container ver_1 ">
+                                            <div>
+                                              <h6>CSI Provides Improved Long-range Freeze Outlook for Florida Growers</h6>
+                                              <p>
+                                                Working with the University of Florida Institute of Food and Agricultural Sciences (IFAS), CSI has developed 
+                                                an improved Freeze Probability Outlook to support Florida agriculture. This extended-range forecast provides 
+                                                insight beyond the 2-week outlook available from other sources. The Freeze Probability Outlook is produced using 
+                                                CSI’s Climate Outlook Resource for Global Insight (CORGI™) technology. It is derived by an analysis which blends 
+                                                historical climate configurations (statistical compositing of similar seasonal teleconnection patterns) coupled 
+                                                with an analysis of dynamical long-range forecasts. The long-range forecast component is provided by the NOAA 
+                                                Climate Forecast System Version 2 2-meter air temperature at appropriate valid times with a spatial resolution 
+                                                of 1⁄2 degree. 
+                                              </p>
+                                              <p>
+                                                CSI worked 
+                                                closely with FAWN Director Rick Lusher and Dr Christian Christensen and Dr. Clyde Fraisse of IFAS to define parameters 
+                                                of the Freeze Probability Outlook. In developing this new resource, IFAS and CSI collaborated to provide a better planning 
+                                                tool for growers/farmers, extension agents, agricultural businesses and other FAWN stakeholders.
+                                              </p>
+                                              <p>The current outlook is posted on the IFAS Florida Automated Weather Network (FAWN) website; 
+                                                <a target="_blank" href="https://fawn.ifas.ufl.edu/freeze_outlook/IFAS_FAWN_Freeze_Outlook.pdf">click here to view.</a></p>
+                                            </div>
+                                            <div>
+                                              <h6>CSI’s ClimateLab™ Supports Environmental Research at the Naval Postgraduate School</h6>
+                                              <p>
+                                                Graduate students at the Naval Postgraduate School (NPS) in Monterey, California are using a new tool to facilitate environmental 
+                                                research projects. ClimateLab™ is a web-based subscription service that provides rapid access to environmental data sets without 
+                                                requiring users to download, store, or backup data on local machines. This is important because environmental datasets – such as 
+                                                forecast model output, reanalysis products, and climatology data – are very large. Downloading and managing these data is time consuming 
+                                                and expensive in terms of machine time and data transfer fees. ClimateLab™ uses Jupyter Hub/Lab technology to enable researchers to access, 
+                                                use, query, and manipulate datasets and test and test and store experimental results within CSI’s data warehouse. ClimateLab™ also provides 
+                                                and extensive library of code for working with data (e.g., visualizing, analyzing, applying to prediction and other operational problems); 
+                                                access to data that is already formatted to optimize efficient use. Data management and experimental calculations are conducted in the same 
+                                                environment to optimize processing speed.
+                                              </p>
+                                              <p>
+                                                ClimateLab™ is available by subscription to users needing a way to access commonly used environmental datasets without downloading and managing 
+                                                huge amounts of data. <a href="mailto:info@clearscienceinc.com">Click here to contact CSI at info@clearscienceinc.com</a> for more information about ClimateLab™ and the available datasets.
+                                              </p>
+                                            </div>
                                             <div>
                                                 <h6>3 June, 2020 - CSI has released the initial version of a historical temperature widget that is embeddable on your website.</h6>
                                                 <p>
@@ -505,16 +625,73 @@
                                     </div>
 
                                 </div>
-                                <div>
+                                <div class="news-contracts">
                                     <div class="childverticaltab ">
                                         <!-- Contracts tabs -->
                                         <ul class="resp-tabs-list ver_1 ">
-                                            <li>US Navy SeaPort Next Generation Award</li>
-
+                                          <li id="news-driftsar">CSI Enhances Navy Search and Rescue Software</li>
+                                          <li id="news-phase-ii5">CSI Completes ACAF-DSS SBIR Phase 2</li>
+                                          <li>CSI on Winning Team Providing Oceanographic Software Support</li>
+                                          <li>CSI Wins SBIR Phase II.5 Contract for ACAF-DSS</li>
+                                          <li>US Navy SeaPort Next Generation Award</li>
                                         </ul>
                                         <div class="resp-tabs-container ver_1 ">
-                                            <div>
-                                                <h4>January 8, 2019 - Clear Science, Inc. Awarded US Navy SeaPort Next Generation Contract</h4>
+                                            <div class="csi-enhances-drift-sar">
+                                              <h6>CSI Enhances Navy Search and Rescue Software</h6>
+                                              <p>
+                                                CSI has been selected to continue providing software upgrades and user support services for the Navy’s Drift-SAR system. 
+                                                Drift-SAR predicts the location of drifting floating objects – including personnel – and submerged objects based on objects’ 
+                                                physical characteristics and observed and forecasted environmental conditions. The system is also used to “back-calculate” the 
+                                                point of origin of a found object. Navy fleet operators use Drift-SAR to plan search-and-rescue and object recovery operations.
+                                              </p>
+                                              <p>
+                                                Under the new contracts, CSI will develop, test, document and implement new capabilities including mine drift prediction and oil 
+                                                spill dispersion forecasting. The work is funded by the Naval Meteorology and Oceanography Command will be performed under subcontract 
+                                                to General Dynamics Information Systems.
+                                              </p>
+                                            </div>
+                                            <div class="csi-completes-phase-ii">
+                                              <h6>CSI Completes ACAF-DSS SBIR Phase 2</h6>
+                                              <p>
+                                                The U.S. Navy’s Office of Naval Research has accepted CSI’s final report on initial development of our Advanced Climate Analysis and Forecasting – 
+                                                Decision Support System (AFAC-DSS). The development work was funded by a Phase 2 Small Business Innovation Research (SBIR) contract initiated in 2016. 
+                                              </p>
+                                            </div>
+                                            <div class="csi-oceanographic-software">
+                                              <h6>CSI on Winning Team Providing Oceanographic Software Support</h6>
+                                              <p>
+                                                Clear Science is providing on-site technical support to the Naval Oceanographic Office (NAVOCEANO) Oceanographic Department at Stennis 
+                                                Space Center in Mississippi. As part of a team led by prime contractor DeVine Consulting, Inc., our personnel provide software development 
+                                                and maintenance services for systems that collect, process, display, and disseminate environmental data from buoys, and autonomous surface 
+                                                and subsurface vehicles. This work helps ensure availability of near real-time oceanographicdata for assimilation into NAVOCEANO ocean 
+                                                nowcast and forecast models that support military exercises and operational activities as well as Fleet requested tactical data products.
+                                              </p>
+                                              <p>
+                                                The team provides operational and technical support services, including custom software programming support, for a range of Government Off 
+                                                the Shelf (GOTS) Applications Software used by the Department. Their work helps improve data coverage, accuracy, and timeliness of NAVOCEANO 
+                                                products and enables transition of new technologies to operational use, with a focus on new satellite and in situ environmental data sources 
+                                                that can have a critical impact on naval operations. DeVine won the potential 5-year prime contract in late 2020.
+                                              </p>
+                                            </div>
+                                            <div class="csi-wins-sbir-phase-ii5">
+                                              <h6>CSI Wins SBIR Phase II.5 Contract for ACAF-DSS</h6>
+                                              <p>
+                                              The Office of Naval Research has issued a Supplemental Phase II (Phase II.5) contract to CSI to continue development of our 
+                                              Advanced Climate Analysis and Forecast – Decision Support System (ACAF-DSS). Under the new contract CSI will research, develop 
+                                              and demonstrate 16 specific technical objectives requested by fleet support personnel and researchers. These objectives reflect 
+                                              heavy user demand placed on the current operational ACAF system – from which ACAF-DSS evolved – and a growing appreciation of 
+                                              the emerging power of ACAF-DSS as a planning and research tool. The additional R&D work is funded under the Navy’s Small Business 
+                                              Innovation Research (SBIR) program.
+                                              </p>
+                                              <p>
+                                              The Phase II.5 award builds on the successful completion of Phase II. In Phase II, CSI developed a prototype application using an 
+                                              in-house computing environment that mimics the Navy high-performance computing system on which ACAF-DSS will be deployed. In addition 
+                                              to new capabilities, the Phase II.5 effort focuses on maturing the user interface (front end) and planning ACAF-DSS installation at 
+                                              the Fleet Numerical Meteorology and Oceanography Center in Monterey, California.
+                                              </p>
+                                            </div>
+                                            <div class="us-navy-seaport-next-gen">
+                                                <h6>January 8, 2019 - Clear Science, Inc. Awarded US Navy SeaPort Next Generation Contract</h6>
 
                                                 <p>Clear Science, Inc. (CSI), developer of mission planning and decision support software that exploits massive amounts of weather and oceanographic data, has been awarded a SeaPort Next Generation (Seaport-NxG)
                                                     prime contract by the US Navy. This award allows CSI to compete for a range of professional services work for current and new customers throughout the Department of the Navy.</p>
@@ -531,11 +708,37 @@
                                                     multiple terabytes of raw environmental data. These products allow users to quantify likely environmental conditions based on a host of climatological variables and to define quantitative ‘levels of
                                                     confidence’ for forecasts based on statistical analyses of each forecast model’s demonstrated accuracy under similar global conditions.</p>
                                             </div>
+                                           
                                         </div>
                                     </div>
                                 </div>
-
-                                <div>
+                                <div class="news-events">
+                                  <div class="childverticaltab ">
+                                    <!-- Events tab -->
+                                    <ul class="resp-tabs-list ver_1 ">
+                                        <li>December 2020 - CSI Hosts Technology Summit on Weather Risk Reduction</li>
+                                    </ul>
+                                    <div class="resp-tabs-container ver_1 ">
+                                        <div>
+                                          <h6>December 2020 - CSI Hosts Technology Summit on Weather Risk Reduction</h6>
+                                          <p>
+                                            In December 2020 CSI hosted an event to promote discussion of weather risk and how businesses and state and local governments anticipate risks important to them. 
+                                            In particular, the focus was on uncertainty in the important 2-week to 1-year planning time frame. Discussion centered on how CSI’s CORGI application helps improve 
+                                            forecast accuracy of specific weather parameters (storm probability, rainfall/drought, freeze onset, etc.) compared to typical seasonal outlooks and long-range forecasts. 
+                                          </p>
+                                          <p>
+                                            Attendees at the hybrid virtual/in-person event included leaders from Florida state agencies and representative of companies in transportation, insurance, lumber, and agriculture 
+                                            sectors. We were honored to have over 50 in attendance. The event was one element of CSI’s effort to commercialize our ACAF-DSS/CORGI software application developed under a U.S. 
+                                            Navy R&D contract. Feedback from participants helps define specific features of interest to non-military users that CSI will implement in CORGI to speed adoption in non-DoD markets.
+                                          </p>
+                                          <p>
+                                            <a href="https://corgi.clearscienceinc.com">Click here to learn more about CORGI.</a>
+                                          </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="news-community">
                                     <div class="childverticaltab ">
                                         <!-- Community tab -->
                                         <ul class="resp-tabs-list ver_1 ">
@@ -574,7 +777,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -1010,6 +1212,9 @@
         <script src="js/mailing-list.js"></script>
 
         <!-- custom scripts -->
+
+        <script src="js/slideshow.js"></script>
+
         <script type="text/javascript ">
             var $window = $(window);
 
