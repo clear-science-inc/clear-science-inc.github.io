@@ -43,6 +43,10 @@
 ====================================== */
 /* custom */
 
+#current-copyright-year {
+  color: #939393;
+}
+
 .centered-paragraph {
   text-align: center;
 }

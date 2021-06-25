@@ -29,11 +29,17 @@
         
     ---------------------------------- */    
 
+function getCurrentYear() {
+  var d = new Date();
+  return d.getFullYear();
+}
+
 (function($) {
 
     "use strict";
 
     var $window = $(window);
+    $('#current-copyright-year').html(getCurrentYear());
 
         /*------------------------------------
             01. Preloader
@@ -1187,10 +1193,12 @@
             15. CountUp
         --------------------------------------*/
 
-        $('.countup').counterUp({
+        if($('.countup').length !== 0) {
+          $('.countup').counterUp({
             delay: 25,
             time: 2000
-        });
+          });
+        }
 
         /*------------------------------------
             16. Countdown
@@ -1211,49 +1219,6 @@
             });
         }
         
-    });
-
-    // === when window loading === //
-    $window.on("load", function() {
-
-        /*------------------------------------
-            17. Isotop
-        --------------------------------------*/
-
-        // magnificPopup with slider
-        $('.single-img').magnificPopup({
-            delegate: '.popimg',
-            type: 'image'
-        });
-
-        // isotope with magnificPopup
-        $('.gallery').magnificPopup({
-            delegate: '.popimg',
-            type: 'image',
-            gallery: {
-                enabled: true
-            }
-        });
-
-        var $gallery = $('.gallery').isotope({
-            // options
-        });
-
-        // filter items on button click
-        $('.filtering').on('click', 'span', function() {
-            var filterValue = $(this).attr('data-filter');
-            $gallery.isotope({
-                filter: filterValue
-            });
-        });
-
-        $('.filtering').on('click', 'span', function() {
-            $(this).addClass('active').siblings().removeClass('active');
-        });
-
-        // stellar
-        $window.stellar();
-
     });    
 
 })(jQuery);
