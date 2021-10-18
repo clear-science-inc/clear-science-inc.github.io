@@ -34,6 +34,20 @@ function getCurrentYear() {
   return d.getFullYear();
 }
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      var id = this.getAttribute('href');
+      var yOffset = -50;
+      var element = document.querySelector(id);
+      var y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({top: y, behavior: 'smooth'});
+      // document.querySelector(this.getAttribute('href')).scrollIntoView({
+      //     behavior: 'smooth'
+      // });
+  });
+});
+
 (function($) {
 
     "use strict";
